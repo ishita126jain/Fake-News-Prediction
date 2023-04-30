@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake news prediction system</title>
+    <style>
+       body{
+        background-image: url({{url_for('static', filename='img.jpg')}});
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+       } 
+       div{
+        text-align: center;
+        margin-top: 100px;
+       }
+       #fname{
+        height:150px;
+        width:500px;
+       }
+    </style>
+</head>
+<body>
+    <div >
+    	<form action="{{url_for('predict')}}" method="post">
+        <h1 > Fake news Classification app</h1>
+        <h2>Input the News content below</h2>
+        <h5>Enter your news content here</h5>
+        <input type="text" name="news" id = "fname" required="required" /><br>
+        <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
